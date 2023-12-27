@@ -13,30 +13,28 @@
           <h1>&#60;<span class="cl-orange">HTML</span> Basics&#62;</h1>
         </header>
         <ul>
-          <a class="nav-link" href="#so_what_is_html">
+          <a class="nav-link" href="#so_what_is_html?">
             <li>So what is HTML?</li>
           </a>
-          <a class="nav-link" href="#what_you_should_already_know">
-            <li>What you should already know</li>
+          <a class="nav-link" href="#anatomy_of_an_html_element">
+            <li>Anatomy of an HTML element</li>
           </a>
-          <a class="nav-link" href="#javascript_and_java">
-            <li>Javascript and Java</li>
+          <a class="nav-link" href="#nesting_elements">
+            <li>Nesting elements</li>
           </a>
-          <a class="nav-link" href="#hello_world">
-            <li>Hello World</li>
+          <a class="nav-link" href="#void_elements">
+            <li>Void elements</li>
           </a>
-          <a class="nav-link" href="#variables">
-            <li>Variables</li>
+          <a class="nav-link" href="#anatomy_of_an_html_document">
+            <li>Anatomy of an HTML document</li>
           </a>
         </ul>
       </nav>
 
       <main id="main-doc">
 
-        <section id="so_what_is_html" class="main-section">
-          <header>
-            <h2 class="cl-orange">So what is HTML?</h2>
-          </header>
+        <section id="so_what_is_html?" class="main-section">
+          <header class="cl-orange">So what is HTML?</header>
           <p>
             HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. For example, content could be structured within a set of paragraphs, a list of bulleted points, or using images and data tables. As the title suggests, this article will give you a basic understanding of HTML and its functions.
           </p>
@@ -61,10 +59,8 @@
 
         </section>
 
-        <section id="what_you_should_already_know" class="main-section">
-          <header>
-            <h2 class="cl-orange">Anatomy of an HTML element</h2>
-          </header>
+        <section id="anatomy_of_an_html_element" class="main-section">
+          <header class="cl-orange">Anatomy of an HTML element</header>
           
           <p>Let's explore this paragraph element a bit further.</p>
 
@@ -108,24 +104,26 @@
         </section>
 
         <section id="nesting_elements" class="main-section">
-          <header>
-            <h2 class="cl-orange">Nesting elements</h2>
-          </header>
+          <header class="cl-orange">Nesting elements</header>
           <p>
             You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word "very" in a <code>&#60;strong&#62;</code> element, which means that the word is to be strongly emphasized:
           </p>
 
-          <code>
-            &#60;p&#62;My cat is &#60;strong&#62;very&#60;/strong&#62; grumpy.&#60;/p&#62;
-          </code>
+          <div class="code-fragment">
+            <code>
+              <span>&#60;<span class="cl-green">p</span>&#62;My cat is &#60;<span class="cl-green">strong</span>&#62;very&#60;/<span class="cl-green">strong</span>&#62; grumpy.&#60;/<span class="cl-green">p</span>&#62;</span>
+            </code>
+          </div>
 
           <p>
             You do however need to make sure that your elements are properly nested. In the example above, we opened the &#60;p&#62; element first, then the &#60;strong&#62; element; therefore, we have to close the &#60;strong&#62; element first, then the &#60;p&#62; element. The following is incorrect:
           </p>
 
-          <code>
-            &#60;p&#62;My cat is &#60;strong&#62;very grumpy.&#60;/p&#62;&#60;/strong&#62;
-          </code>
+          <div class="code-fragment">
+            <code>
+             <span>&#60;<span class="cl-green">p</span>&#62;My cat is &#60;<span class="cl-green">strong</span>&#62;very grumpy.&#60;/<span class="cl-green">p</span>&#62;&#60;/<span class="cl-green">strong</span>&#62;</span>
+            </code>
+          </div>
 
           <p>
             The elements have to open and close correctly so that they are clearly inside or outside one another. If they overlap as shown above, then your web browser will try to make the best guess at what you were trying to say, which can lead to unexpected results. So don't do it!
@@ -134,9 +132,7 @@
         </section>
 
         <section id="void_elements" class="main-section">
-          <header>
-            <h2 class="cl-orange">Void elements</h2>
-          </header>
+          <header class="cl-orange">Void elements</header>
           <p>
             Some elements have no content and are called void elements. Take the &#60;/img&#62; element that we already have in our HTML page:
           </p>
@@ -153,10 +149,8 @@
           </p>
         </section>
 
-        <section id="variables" class="main-section">
-          <header>
-            <h2 class="cl-orange">Anatomy of an HTML document</h2>
-          </header>
+        <section id="anatomy_of_an_html_document" class="main-section">
+          <header class="cl-orange">Anatomy of an HTML document</header>
           <p>
             That wraps up the basics of individual HTML elements, but they aren't handy on their own. Now we'll look at how individual elements are combined to form an entire HTML page. Let's revisit the code we put into our index.html example (which we first met in the <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a> article):
           </p>
@@ -263,10 +257,11 @@
         </section>
       </main>
     </div>
-    <footer>
-      Project made it by Augusto Seta 🚀
+    <footer id="footer">
+      <span>Project made it by <strong class="cl-green">Augusto Seta</strong></span>
       <br>
-      <span>This documentation was bassed on the HTML documentation of MDN</span>
+      <br>
+      <span>The informative content of this project was extracted from <em><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics">MDN Web Docs</a></em></span>
     </footer>
   </body>
 </html>
